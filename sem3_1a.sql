@@ -82,3 +82,17 @@ begin
 end;
 $procedure$;
 call get_customer_sales('C001');
+
+
+--#10
+create procedure apply_regional_discount(p_region varchar(20), p_discount_rate numeric(5, 2))
+language plpgsql
+as $$
+begin
+    update orders
+    set sales = sales * (1 - p_discount_rate)
+    where customer_id in (select customer_id from orders where region = p_region);
+    raise notice 'p_region: %, p_discount_rate: %', p_region, p_discount_rate;
+end
+$$;
+call apply_regional_discount('West', 0.10);
