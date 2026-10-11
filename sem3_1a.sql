@@ -69,3 +69,16 @@ alter database retail_sales
 set datestyle to 'ISO, MDY';
 select * from orders;
 show datestyle;
+
+
+--#9
+create procedure get_customer_sales(p_customer_id varchar(20))
+language plpgsql
+as $procedure$
+declare v_total_sales numeric(10, 2);
+begin
+    select sum(sales) into v_total_sales from orders where customer_id = p_customer_id;
+    raise notice 'customer_id: %, total_sales: %', p_customer_id, v_total_sales;
+end;
+$procedure$;
+call get_customer_sales('C001');
