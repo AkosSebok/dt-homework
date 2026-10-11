@@ -18,3 +18,7 @@ group by c.region, date_trunc('month', o.order_date);
 create view analyst_orders as
 select order_id, customer_id, product_id, sales, quantity, discount
 from orders;
+
+
+create index idx_orders_customer_id 
+on orders(customer_id);
