@@ -42,3 +42,10 @@ select o.*
 from orders o
 inner join customers c on o.customer_id = c.customer_id
 where c.region = 'West' and o.order_date >= '2024-01-01';
+
+
+
+explain analyze
+select *
+from orders
+where customer_id = 'C001';
