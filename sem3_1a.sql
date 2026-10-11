@@ -96,3 +96,16 @@ begin
 end
 $$;
 call apply_regional_discount('West', 0.10);
+
+
+--#11
+create procedure get_sales_between(start_date date, end_date date)
+language plpgsql
+as $$
+declare v_total_sales numeric(10, 2);
+begin
+    select sum(sales) into v_total_sales from orders where order_date between start_date and end_date;
+    raise notice 'start_date: %, end_date: %, total_sales: %', start_date, end_date, v_total_sales;
+end 
+$$;
+call get_sales_between('2024-01-01', '2024-03-31');
