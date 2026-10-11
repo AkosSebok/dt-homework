@@ -13,3 +13,8 @@ select c.region, date_trunc('month', o.order_date) as month, sum(o.sales) as mon
 from customers c
 inner join orders o on c.customer_id = o.customer_id
 group by c.region, date_trunc('month', o.order_date);
+
+
+create view analyst_orders as
+select order_id, customer_id, product_id, sales, quantity, discount
+from orders;
