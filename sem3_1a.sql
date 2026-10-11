@@ -6,3 +6,10 @@ from customers c
 inner join orders o on c.customer_id = o.customer_id
 group by c.customer_id, c.customer_name
 having sum(o.sales) > 2000;
+
+
+create View regional_monthly_sales as
+select c.region, date_trunc('month', o.order_date) as month, sum(o.sales) as monthly_sales
+from customers c
+inner join orders o on c.customer_id = o.customer_id
+group by c.region, date_trunc('month', o.order_date);
