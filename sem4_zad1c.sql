@@ -16,3 +16,14 @@ select * from retail_sales;
 
 
 --#2
+select customer_id, invoice_no, invoice_date, quantity, unit_price, (quantity * unit_price) as revenue, 
+sum(quantity * unit_price) over (
+    partition by customer_id order by invoice_date 
+    range between interval '14 days' preceding 
+    and current row
+    ) as revenue_last_14_days
+from retail_sales
+where customer_id is not null
+order by customer_id, invoice_date;
+
+
