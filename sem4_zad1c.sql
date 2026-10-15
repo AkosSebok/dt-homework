@@ -56,6 +56,7 @@ FROM next_orders
 WHERE next_invoice_date IS NOT NULL
 ORDER BY days_to_next_invoice DESC;
 
+
 --#5
 with price_comparison as (
     select stock_code, invoice_no, invoice_date,
@@ -69,4 +70,18 @@ from price_comparison
 where previous_price is not null
 and current_price <> previous_price
 order by invoice_date;
+
+
+--#6
+with customer_sales as (
+    select customer_id, sum(quantity * unit_price) as total_amount 
+    from retail_sales
+    where customer_id is not null
+    group by customer_id
+)
+select customer_id, total_amount, ntile(4) over (
+    order by total_amount desc) as sales_quartile
+from customer_sales
+order by total_amount desc;
+
 
