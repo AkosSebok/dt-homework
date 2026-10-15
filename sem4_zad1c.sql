@@ -27,3 +27,16 @@ where customer_id is not null
 order by customer_id, invoice_date;
 
 
+--#3
+select stock_code, country, invoice_date, quantity, 
+round( 
+    avg(quantity) over (
+        partition by stock_code, country order by invoice_date
+        range between interval '7 days' preceding
+        and current row
+    ), 2
+) as avg_quantity_7_days
+from retail_sales
+where quantity > 1
+order by stock_code, country, invoice_date;
+
