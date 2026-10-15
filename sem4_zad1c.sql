@@ -56,3 +56,17 @@ FROM next_orders
 WHERE next_invoice_date IS NOT NULL
 ORDER BY days_to_next_invoice DESC;
 
+--#5
+with price_comparison as (
+    select stock_code, invoice_no, invoice_date,
+    lag(unit_price) over (
+        partition by stock_code order by invoice_date
+    ) as previous_price, unit_price as current_price
+    from retail_sales
+)
+select stock_code, invoice_no, invoice_date, previous_price, current_price, (current_price - previous_price) as price_difference
+from price_comparison
+where previous_price is not null
+and current_price <> previous_price
+order by invoice_date;
+
