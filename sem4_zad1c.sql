@@ -85,3 +85,15 @@ from customer_sales
 order by total_amount desc;
 
 
+--#7
+with monthly_sales as (
+    select country, date_trunc('month', invoice_date)::DATE as month, sum(quantity * unit_price) as total_amount
+    from retail_sales
+    group by country, date_trunc('month', invoice_date)
+)
+select country, month, total_amount, ntile(4) over (
+    partition by country order by total_amount desc) as sales_quartile
+from monthly_sales
+order by country, month;
+
+
