@@ -97,3 +97,15 @@ from monthly_sales
 order by country, month;
 
 
+--#8
+with ranked_orders as (
+    select customer_id, invoice_no, invoice_date, stock_code, description, quantity, unit_price,
+    row_number() over (
+        partition by customer_id order by invoice_date
+    ) as rows
+    from retail_sales
+)
+select customer_id, invoice_no, invoice_date, stock_code, description, quantity, unit_price
+from ranked_orders
+where rows = 1
+order by customer_id;
