@@ -109,3 +109,18 @@ select customer_id, invoice_no, invoice_date, stock_code, description, quantity,
 from ranked_orders
 where rows = 1
 order by customer_id;
+
+
+--#9
+with ranked_products as (
+    select invoice_no, stock_code, description, quantity, unit_price, quantity * unit_price as amount, 
+    row_number() over (
+        partition by invoice_no order by quantity * unit_price desc
+    ) as row_num
+    from retail_sales
+)
+select invoice_no, stock_code, description, quantity, unit_price, amount, row_num
+from ranked_products
+where row_num <= 3
+order by invoice_no, row_num;
+
