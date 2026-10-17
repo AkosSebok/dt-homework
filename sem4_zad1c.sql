@@ -124,3 +124,24 @@ from ranked_products
 where row_num <= 3
 order by invoice_no, row_num;
 
+
+--#10
+with monthly_sales as (
+    select country, date_trunc('month', invoice_date)::date as month, customer_id, sum(quantity * unit_price) as total_amount
+    from retail_sales
+    where customer_id is not null
+    group by country, date_trunc('month', invoice_date)::date, customer_id
+), 
+ranked_customers as (
+    select country, month, customer_id, total_amount,
+    dense_rank() over (
+        partition by country, month order by total_amount desc
+    ) as sales_rank
+    from monthly_sales
+)
+select country, month, customer_id, total_amount, sales_rank
+from ranked_customers
+where sales_rank <= 5
+order by country, month, sales_rank, customer_id;
+
+
