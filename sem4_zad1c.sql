@@ -145,3 +145,15 @@ where sales_rank <= 5
 order by country, month, sales_rank, customer_id;
 
 
+--#11
+with ranked_products as (
+    select invoice_no, stock_code, description, quantity, unit_price,
+    dense_rank() over (
+        partition by invoice_no order by unit_price desc
+    ) as price_rank
+    from retail_sales
+)
+select invoice_no, stock_code, description, quantity, unit_price, price_rank
+from ranked_products
+where price_rank <= 5
+order by invoice_no, price_rank, stock_code;
