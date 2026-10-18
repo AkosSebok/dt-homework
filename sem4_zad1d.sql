@@ -32,3 +32,17 @@ dense_rank() over (
 from customer_profit
 order by region, profit_rank, customer_name;
 
+
+--#3
+with customer_sales as (
+    select c.customer_id, c.customer_name, sum(o.sales) as total_sales
+    from customers c
+    inner join orders o on c.customer_id = o.customer_id
+    group by c.customer_id, c.customer_name
+)
+select customer_name, total_sales, 
+ntile(4) over (
+    order by total_sales desc
+) as quartile
+from customer_sales
+order by total_sales desc;
