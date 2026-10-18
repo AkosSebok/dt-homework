@@ -13,3 +13,22 @@ select customer_name, order_id, order_date
 from customer_orders
 where rows <= 2
 order by customer_name, rows;
+
+
+--#2
+with customer_profit as (
+    select c.customer_name, c.region, sum(o.profit) as total_profit
+    from customers c
+    inner join orders o on c.customer_id = o.customer_id
+    group by c.region, c.customer_name, c.customer_id
+)
+select region, customer_name, total_profit,
+rank() over (
+    partition by region order by total_profit desc
+) as profit_rank,
+dense_rank() over (
+    partition by region order by total_profit desc
+) as profit_dense_rank
+from customer_profit
+order by region, profit_rank, customer_name;
+
