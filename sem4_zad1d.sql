@@ -82,3 +82,16 @@ round(
 from product_sales
 order by category, product_name;
 
+
+--#6
+with customer_orders as (
+    select c.customer_id, c.customer_name, o.order_date, max(o.order_date) over (
+        partition by c.customer_id
+    ) as last_order_date, max(o.order_date) over () as latest_order_date
+    from customers c
+    inner join orders o on c.customer_id = o.customer_id
+)
+select distinct customer_id, customer_name, last_order_date
+from customer_orders
+where last_order_date < latest_order_date - interval '90 days'
+order by last_order_date;
