@@ -46,3 +46,21 @@ ntile(4) over (
 ) as quartile
 from customer_sales
 order by total_sales desc;
+
+
+--#4
+with monthly_sales as (
+    select date_trunc('month', order_date)::date as month, sum(sales) as monthly_sales
+    from orders
+    group by date_trunc('month', order_date)::date
+)
+select month, monthly_sales,
+lag(monthly_sales, 1) over (
+    order by month
+) as previous_month_sales,
+lead(monthly_sales, 1) over (
+    order by month
+) as next_month_sales
+from monthly_sales
+order by month;
+
