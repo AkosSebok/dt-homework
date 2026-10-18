@@ -64,3 +64,21 @@ lead(monthly_sales, 1) over (
 from monthly_sales
 order by month;
 
+--#5
+with product_sales as (
+    select p.category, p.product_name, sum(o.sales) as product_sales
+    from orders o
+    inner join products p on o.product_id = p.product_id
+    group by p.category, p.product_name
+)
+select category, product_name, product_sales, sum(product_sales) over (
+    partition by category
+) as category_total,
+round(
+    product_sales * 100.0 / sum(product_sales) over (
+        partition by category
+    ), 2
+) as pct_of_category
+from product_sales
+order by category, product_name;
+
