@@ -1,0 +1,131 @@
+OrderID,CustomerName,Region,Product,Quantity,SalesAmount,Discount,OrderDate,DeliveryDate,PhoneNumber,PhoneNumber_Cleaned,PhoneNumber_Invalid,rejection_reason
+ORD1095,Bob Smith,South,Unknown,-1.0,2710.16,15.0,2025-04-06,,+2348012345678,2348012345678,False,"invalid_quantity, invalid_delivery_date"
+ORD1015,Charlie Lee,West,phone ,7.0,,20.0,2025-01-16,2025-01-19,12345,12345,True,invalid_sales_amount
+ORD1158,Ibrahim Musa,North,phone ,0.0,,5.0,2025-06-08,2025-06-21,+1-202-555-0178,12025550178,False,"invalid_quantity, invalid_sales_amount"
+ORD1115,Rita Gomez,North,Unknown,-1.0,3876.36,10.0,2025-04-26,2025-05-04,+1-202-555-0178,12025550178,False,invalid_quantity
+ORD1069,Oluwaseun Adebayo,north,Tablet,3.5,2518.94,,2025-03-11,2025-03-15,(202) 555-0189,2025550189,False,"invalid_quantity, invalid_discount"
+ORD1045,Ibrahim Musa,Souht,phone ,2.0,,15.0,2025-02-15,2025-02-19,12345,12345,True,invalid_sales_amount
+ORD1182,Hannah Davis,North,Accessory,2.0,426.28,20.0,2025-07-02,2024-12-31,555-018X,555018,True,delivery_before_order
+ORD1165,,north,phone ,6.0,2156.98,5.0,2025-06-15,2025-06-13,+1-202-555-0178,12025550178,False,"missing_customer, delivery_before_order"
+ORD1078,,north,Accessory,5.0,4231.81,,2025-03-20,,12345,12345,True,"missing_customer, invalid_discount, invalid_delivery_date"
+ORD1186,Charlie Lee,West,Phone,8.0,572.23,10.0,,2025-01-14,2025550185,2025550185,False,"duplicate_order_id, invalid_order_date"
+ORD1056,Lola Ade,West,lap top,6.0,,10.0,,2025-01-16,,,False,"invalid_sales_amount, invalid_order_date"
+ORD1152,David King,Souht,phone ,0.0,3728.05,10.0,2025-06-02,2025-06-07,2025550185,2025550185,False,invalid_quantity
+ORD1082,,Nrth,Unknown,4.0,,0.0,,2025-04-03,,,False,"missing_customer, invalid_sales_amount, invalid_order_date"
+ORD1068,Ibrahim Musa,West,Accessory,4.0,,25.0,2025-03-10,2025-03-20,,,False,invalid_sales_amount
+ORD1016,George Miller,North,Unknown,2.0,,30.0,2025-01-17,2025-01-28,+44 20 7946 0958,442079460958,False,invalid_sales_amount
+ORD1148,Rita Gomez,north,lap top,10.0,1576.37,15.0,,2025-01-27,(202) 555-0189,2025550189,False,invalid_order_date
+ORD1093,,East,phone ,4.0,1955.46,15.0,2025-04-04,2025-04-15,555-018X,555018,True,missing_customer
+ORD1065,Hannah Davis,north,Unknown,9.0,,10.0,2025-03-07,2025-03-11,,,False,invalid_sales_amount
+ORD1060,Bob Smith,North,lap top,6.0,,25.0,2025-03-02,2025-03-11,2025550185,2025550185,False,invalid_sales_amount
+ORD1125,Quinn Harper,Souht,Phone,-1.0,336.52,25.0,2025-05-06,,+44 20 7946 0958,442079460958,False,"invalid_quantity, invalid_delivery_date"
+ORD1132,Fatima Yusuf,South,phone ,5.0,,0.0,2025-05-13,2025-05-09,(202) 555-0189,2025550189,False,"invalid_sales_amount, delivery_before_order"
+ORD1009,Rita Gomez,West,Tablet,7.0,4827.46,20.0,2025-01-10,2025-01-06,+1-202-555-0178,12025550178,False,delivery_before_order
+ORD1018,Quinn Harper,North,Laptop,4.0,1656.26,,2025-01-19,2025-01-26,+44 20 7946 0958,442079460958,False,invalid_discount
+ORD1035,Tina Zhang,SOUTH ,Laptop,6.0,,150.0,2025-02-25,2025-03-11,+44 20 7946 0958,442079460958,False,"duplicate_order_id, invalid_sales_amount, invalid_discount"
+ORD1150,,North,phone ,10.0,2381.85,,2025-05-31,2025-06-02,(202) 555-0189,2025550189,False,"duplicate_order_id, missing_customer, invalid_discount"
+ORD1104,Kevin Patel,Nrth,Accessory,3.0,,30.0,2025-04-15,2025-04-16,+44 20 7946 0958,442079460958,False,invalid_sales_amount
+ORD1135,Tina Zhang,South,Accessory,-1.0,,0.0,2025-05-16,2025-05-26,+2348012345678,2348012345678,False,"invalid_quantity, invalid_sales_amount"
+ORD1164,Joyce Li,East,Phone,3.5,1407.27,5.0,2025-06-14,2025-06-21,2025550185,2025550185,False,invalid_quantity
+ORD1076,,SOUTH ,Accessory,6.0,,0.0,2025-03-18,2025-03-29,,,False,"missing_customer, invalid_sales_amount"
+ORD1079,,SOUTH ,lap top,9.0,469.71,,,2025-04-04,(202) 555-0189,2025550189,False,"missing_customer, invalid_discount, invalid_order_date"
+ORD1186,David King,north,Phone,4.0,4496.56,30.0,2025-02-08,2025-02-15,12345,12345,True,duplicate_order_id
+ORD1122,Lola Ade,Souht,Tablet,0.0,,5.0,2025-05-03,2025-04-30,555-018X,555018,True,"invalid_quantity, invalid_sales_amount, delivery_before_order"
+ORD1143,Rita Gomez,Nrth,Accessory,5.0,,0.0,2025-05-24,2025-06-05,+44 20 7946 0958,442079460958,False,invalid_sales_amount
+ORD1086,Fatima Yusuf,Souht,Unknown,4.0,,-5.0,,2025-01-28,2025550185,2025550185,False,"invalid_sales_amount, invalid_discount, invalid_order_date"
+ORD1114,Hannah Davis,South,lap top,10.0,,5.0,2025-04-25,2025-04-26,,,False,invalid_sales_amount
+ORD1098,Kevin Patel,South,Accessory,0.0,4171.79,30.0,2025-04-09,2025-04-23,+44 20 7946 0958,442079460958,False,"duplicate_order_id, invalid_quantity"
+ORD1096,Hannah Davis,West,lap top,8.0,3638.46,5.0,,,555-018X,555018,True,"invalid_order_date, invalid_delivery_date"
+ORD1097,Bob Smith,north,Tablet,10.0,,30.0,2025-04-08,2025-04-19,08012345678,08012345678,False,invalid_sales_amount
+ORD1031,Fatima Yusuf,SOUTH ,Tablet,7.0,1236.1,15.0,2025-02-01,2024-12-31,12345,12345,True,"duplicate_order_id, delivery_before_order"
+ORD1012,Nina Roberts,Souht,Unknown,-1.0,4554.0,5.0,2025-01-13,2025-01-09,555-018X,555018,True,"invalid_quantity, delivery_before_order"
+ORD1035,Ella Brown,South,Laptop,6.0,2498.38,15.0,2025-02-05,2025-02-15,,,False,duplicate_order_id
+ORD1119,Nina Roberts,West,phone ,9.0,,,2025-04-30,2025-05-02,2025550185,2025550185,False,"invalid_sales_amount, invalid_discount"
+ORD1090,,East,Tablet,0.0,245.83,5.0,2025-04-01,2025-03-28,,,False,"missing_customer, invalid_quantity, delivery_before_order"
+ORD1136,Charlie Lee,South,Accessory,9.0,758.7,15.0,2025-05-17,,+1-202-555-0178,12025550178,False,invalid_delivery_date
+ORD1051,Charlie Lee,East,lap top,4.0,,25.0,,2025-02-19,2025550185,2025550185,False,"invalid_sales_amount, invalid_order_date"
+ORD1127,Charlie Lee,East,Laptop,3.0,2270.99,0.0,2025-05-08,,+2348012345678,2348012345678,False,invalid_delivery_date
+ORD1041,David King,North,lap top,2.0,,30.0,2025-02-11,2025-02-12,2025550185,2025550185,False,invalid_sales_amount
+ORD1118,Samuel Okonkwo,South,phone ,10.0,,15.0,2025-04-29,2025-05-04,+2348012345678,2348012345678,False,invalid_sales_amount
+ORD1080,Ella Brown,Souht,lap top,1.0,2940.19,15.0,2025-04-24,2025-05-04,+2348012345678,2348012345678,False,duplicate_order_id
+ORD1026,Hannah Davis,SOUTH ,Unknown,7.0,,25.0,,2025-01-19,555-018X,555018,True,"invalid_sales_amount, invalid_order_date"
+ORD1100,Ibrahim Musa,North,Accessory,6.0,3457.6,,2025-04-11,2025-04-23,,,False,invalid_discount
+ORD1111,Ella Brown,Nrth,Tablet,2.0,,5.0,2025-04-22,2025-04-23,+44 20 7946 0958,442079460958,False,invalid_sales_amount
+ORD1002,Alice Johnson,West,Phone,4.0,,10.0,2025-01-03,2025-01-05,(202) 555-0189,2025550189,False,invalid_sales_amount
+ORD1187,Charlie Lee,Nrth,lap top,-1.0,2973.81,25.0,2025-07-07,2025-07-13,+2348012345678,2348012345678,False,invalid_quantity
+ORD1150,Ella Brown,North,Tablet,2.0,,-5.0,2025-07-11,2025-07-25,08012345678,08012345678,False,"duplicate_order_id, invalid_sales_amount, invalid_discount"
+ORD1085,Hannah Davis,North,Accessory,4.0,3105.34,10.0,,2024-12-31,12345,12345,True,invalid_order_date
+ORD1061,,North,phone ,8.0,503.88,10.0,2025-03-03,2025-03-11,555-018X,555018,True,missing_customer
+ORD1022,George Miller,Souht,Unknown,8.0,2714.26,0.0,2025-01-23,2025-01-27,(202) 555-0189,2025550189,False,duplicate_order_id
+ORD1141,Quinn Harper,Souht,lap top,10.0,3969.62,5.0,,2025-01-19,2025550185,2025550185,False,invalid_order_date
+ORD1011,Samuel Okonkwo,South,lap top,10.0,,10.0,2025-01-12,2025-01-24,(202) 555-0189,2025550189,False,invalid_sales_amount
+ORD1194,Paul Walker,West,phone ,1.0,663.34,,2025-07-14,2025-07-20,2025550185,2025550185,False,invalid_discount
+ORD1027,Oluwaseun Adebayo,West,Accessory,8.0,520.53,-5.0,2025-01-28,2024-12-31,,,False,"invalid_discount, delivery_before_order"
+ORD1120,Samuel Okonkwo,Nrth,Phone,8.0,,10.0,2025-05-01,2025-05-14,12345,12345,True,invalid_sales_amount
+ORD1004,Hannah Davis,north,Tablet,,1604.52,,2025-01-05,2025-01-08,+2348012345678,2348012345678,False,"invalid_quantity, invalid_discount"
+ORD1032,Nina Roberts,north,Accessory,7.0,3415.37,30.0,2025-02-02,2025-01-29,,,False,delivery_before_order
+ORD1142,Ibrahim Musa,West,Accessory,0.0,3280.47,5.0,2025-05-23,2025-05-30,(202) 555-0189,2025550189,False,invalid_quantity
+ORD1145,,Nrth,Phone,8.0,4442.69,20.0,2025-05-26,2025-06-09,+1-202-555-0178,12025550178,False,missing_customer
+ORD1109,,north,lap top,1.0,4856.04,20.0,2025-04-20,2025-04-23,,,False,"duplicate_order_id, missing_customer"
+ORD1022,Ibrahim Musa,SOUTH ,Unknown,2.0,4152.49,20.0,2025-04-23,2025-04-25,+44 20 7946 0958,442079460958,False,duplicate_order_id
+ORD1166,Quinn Harper,East,Laptop,2.0,3841.81,150.0,,2025-06-26,555-018X,555018,True,"invalid_discount, invalid_order_date"
+ORD1000,,north,Laptop,4.0,4665.6,15.0,,2025-01-14,+44 20 7946 0958,442079460958,False,"missing_customer, invalid_order_date"
+ORD1198,Quinn Harper,West,phone ,6.0,,,2025-07-18,2025-07-27,,,False,"invalid_sales_amount, invalid_discount"
+ORD1070,,North,Accessory,8.0,839.43,25.0,2025-03-12,2025-03-26,555-018X,555018,True,missing_customer
+ORD1064,Charlie Lee,East,Tablet,0.0,674.43,20.0,2025-03-06,2025-03-14,+2348012345678,2348012345678,False,invalid_quantity
+ORD1163,,Souht,Unknown,7.0,2790.2,15.0,,,2025550185,2025550185,False,"missing_customer, invalid_order_date, invalid_delivery_date"
+ORD1155,Fatima Yusuf,East,Accessory,,3356.67,30.0,2025-06-05,2025-06-12,2025550185,2025550185,False,invalid_quantity
+ORD1156,Oluwaseun Adebayo,SOUTH ,Phone,0.0,4370.56,0.0,2025-06-06,2025-06-20,+2348012345678,2348012345678,False,invalid_quantity
+ORD1025,Nina Roberts,Nrth,Laptop,1.0,470.09,30.0,2025-01-26,2025-01-30,+1-202-555-0178,12025550178,False,duplicate_order_id
+ORD1023,,South,Tablet,,1189.16,30.0,2025-01-24,2025-01-29,2025550185,2025550185,False,"missing_customer, invalid_quantity"
+ORD1035,Hannah Davis,Souht,Unknown,5.0,2082.64,10.0,2025-07-04,2025-07-16,2025550185,2025550185,False,duplicate_order_id
+ORD1147,,South,lap top,7.0,3653.47,,2025-05-28,2025-05-31,555-018X,555018,True,"missing_customer, invalid_discount"
+ORD1039,Charlie Lee,north,Tablet,1.0,1452.41,20.0,2025-02-09,2025-02-04,2025550185,2025550185,False,delivery_before_order
+ORD1168,George Miller,Nrth,Phone,,3052.79,,2025-06-18,2025-06-28,2025550185,2025550185,False,"invalid_quantity, invalid_discount"
+ORD1047,Oluwaseun Adebayo,West,lap top,-1.0,1493.44,30.0,2025-02-17,2025-02-18,+44 20 7946 0958,442079460958,False,invalid_quantity
+ORD1094,Kevin Patel,South,Unknown,9.0,4747.92,30.0,2025-04-05,2025-04-01,(202) 555-0189,2025550189,False,delivery_before_order
+ORD1138,Mohammed Ali,Nrth,Unknown,,3566.52,20.0,2025-05-19,2025-05-27,2025550185,2025550185,False,invalid_quantity
+ORD1098,George Miller,West,phone ,8.0,321.54,30.0,,2025-04-29,2025550185,2025550185,False,"duplicate_order_id, invalid_order_date"
+ORD1053,Joyce Li,East,Tablet,3.5,,20.0,2025-02-23,2025-02-27,,,False,"invalid_quantity, invalid_sales_amount"
+ORD1133,,East,phone ,8.0,557.65,15.0,2025-05-14,2025-05-27,,,False,missing_customer
+ORD1180,Lola Ade,East,lap top,2.0,,30.0,2025-06-30,2025-07-08,+44 20 7946 0958,442079460958,False,invalid_sales_amount
+ORD1049,David King,West,lap top,7.0,,,2025-02-19,2025-02-24,555-018X,555018,True,"invalid_sales_amount, invalid_discount"
+ORD1080,Charlie Lee,East,lap top,-1.0,1337.0,5.0,2025-03-22,2024-12-31,+2348012345678,2348012345678,False,"duplicate_order_id, invalid_quantity, delivery_before_order"
+ORD1007,David King,SOUTH ,Laptop,2.0,,100.0,2025-01-08,2025-01-21,+1-202-555-0178,12025550178,False,invalid_sales_amount
+ORD1110,Oluwaseun Adebayo,East,Laptop,8.0,1680.88,150.0,2025-04-21,2025-04-23,+2348012345678,2348012345678,False,invalid_discount
+ORD1083,Fatima Yusuf,West,Unknown,8.0,3199.98,20.0,2025-03-25,2024-12-31,,,False,delivery_before_order
+ORD1176,Kevin Patel,north,phone ,8.0,1893.45,15.0,2025-06-26,,+2348012345678,2348012345678,False,invalid_delivery_date
+ORD1025,Ibrahim Musa,SOUTH ,Tablet,7.0,3253.21,30.0,2025-03-31,2025-04-05,+1-202-555-0178,12025550178,False,duplicate_order_id
+ORD1008,,South,phone ,6.0,4824.83,0.0,2025-01-09,2025-01-16,+2348012345678,2348012345678,False,missing_customer
+ORD1013,Bob Smith,North,Accessory,2.0,737.89,5.0,2025-01-14,2025-01-13,08012345678,08012345678,False,delivery_before_order
+ORD1059,Charlie Lee,South,Tablet,3.5,3782.78,10.0,2025-03-01,2025-03-13,+44 20 7946 0958,442079460958,False,invalid_quantity
+ORD1171,Fatima Yusuf,Souht,lap top,6.0,,30.0,2025-06-21,2025-06-24,555-018X,555018,True,invalid_sales_amount
+ORD1131,,Nrth,Unknown,1.0,175.13,10.0,2025-05-12,2025-05-17,,,False,missing_customer
+ORD1072,Fatima Yusuf,north,Tablet,7.0,,25.0,2025-03-14,2025-03-22,+1-202-555-0178,12025550178,False,invalid_sales_amount
+ORD1109,Tina Zhang,Souht,Tablet,5.0,,-5.0,,,+1-202-555-0178,12025550178,False,"duplicate_order_id, invalid_sales_amount, invalid_discount, invalid_order_date, invalid_delivery_date"
+ORD1167,Tina Zhang,North,Accessory,0.0,3381.38,,2025-06-17,2025-06-23,+44 20 7946 0958,442079460958,False,"invalid_quantity, invalid_discount"
+ORD1183,Bob Smith,East,phone ,3.0,2131.59,,2025-07-03,2025-07-11,08012345678,08012345678,False,invalid_discount
+ORD1063,Joyce Li,West,lap top,9.0,,,2025-03-05,2025-03-13,,,False,"invalid_sales_amount, invalid_discount"
+ORD1192,,Nrth,Accessory,10.0,,10.0,2025-02-24,2025-03-07,+1-202-555-0178,12025550178,False,"duplicate_order_id, missing_customer, invalid_sales_amount"
+ORD1107,Paul Walker,West,lap top,8.0,,10.0,2025-04-18,2025-04-28,08012345678,08012345678,False,invalid_sales_amount
+ORD1048,Rita Gomez,West,lap top,5.0,129.26,150.0,2025-02-18,2025-02-27,12345,12345,True,invalid_discount
+ORD1021,Rita Gomez,North,Phone,7.0,,30.0,2025-01-22,2025-01-31,+44 20 7946 0958,442079460958,False,invalid_sales_amount
+ORD1057,Samuel Okonkwo,South,Tablet,6.0,,0.0,2025-02-27,2025-03-11,+2348012345678,2348012345678,False,invalid_sales_amount
+ORD1031,Fatima Yusuf,South,Unknown,2.0,535.93,25.0,,2025-06-21,,,False,"duplicate_order_id, invalid_order_date"
+ORD1192,Ella Brown,SOUTH ,phone ,7.0,,,2025-07-12,2025-07-23,(202) 555-0189,2025550189,False,"duplicate_order_id, invalid_sales_amount, invalid_discount"
+ORD1129,David King,Nrth,Phone,1.0,,20.0,2025-05-10,2025-05-14,+2348012345678,2348012345678,False,invalid_sales_amount
+ORD1025,Alice Johnson,north,Phone,8.0,,10.0,2025-06-07,2025-06-20,(202) 555-0189,2025550189,False,"duplicate_order_id, invalid_sales_amount"
+ORD1193,,West,Phone,9.0,2496.98,30.0,2025-07-13,2025-07-23,(202) 555-0189,2025550189,False,missing_customer
+ORD1001,David King,West,lap top,2.0,,25.0,2025-01-02,2025-01-14,,,False,invalid_sales_amount
+ORD1052,Rita Gomez,north,Phone,5.0,,15.0,2025-02-22,2025-03-04,555-018X,555018,True,invalid_sales_amount
+ORD1130,Ella Brown,North,Accessory,10.0,1522.12,,2025-05-11,2025-05-18,12345,12345,True,invalid_discount
+ORD1103,Samuel Okonkwo,Souht,Unknown,1.0,,5.0,2025-04-14,2025-04-15,08012345678,08012345678,False,invalid_sales_amount
+ORD1099,Mohammed Ali,West,Accessory,-1.0,4696.48,25.0,2025-04-10,2025-04-11,(202) 555-0189,2025550189,False,invalid_quantity
+ORD1116,Rita Gomez,SOUTH ,Tablet,-1.0,,,2025-04-27,2025-05-04,2025550185,2025550185,False,"invalid_quantity, invalid_sales_amount, invalid_discount"
+ORD1074,Lola Ade,north,Phone,3.5,,,2025-03-16,2025-03-22,+2348012345678,2348012345678,False,"invalid_quantity, invalid_sales_amount, invalid_discount"
+ORD1121,Mohammed Ali,East,lap top,10.0,1804.05,,2025-05-02,2025-05-08,08012345678,08012345678,False,invalid_discount
+ORD1020,Alice Johnson,South,Tablet,1.0,,5.0,2025-01-21,2025-02-04,+44 20 7946 0958,442079460958,False,invalid_sales_amount
+ORD1071,Lola Ade,East,lap top,8.0,,30.0,2025-03-13,2025-03-24,555-018X,555018,True,invalid_sales_amount
+ORD1106,,Souht,phone ,1.0,4841.67,25.0,2025-04-17,2025-04-19,2025550185,2025550185,False,missing_customer
+ORD1014,Alice Johnson,West,lap top,6.0,,25.0,2025-01-15,,12345,12345,True,"invalid_sales_amount, invalid_delivery_date"
+ORD1179,David King,East,phone ,1.0,,30.0,2025-06-29,2025-07-02,(202) 555-0189,2025550189,False,invalid_sales_amount
